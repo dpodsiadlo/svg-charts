@@ -1,0 +1,20 @@
+{
+  "name": "dpodsiadlo/svg-charts",
+  "description": "SVG Charts Generator for Laravel & DOMPDF",
+  "keywords": [
+    "laravel",
+    "svg",
+    "charts"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6",
+    "illuminate/view": ">=5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "DPodsiadlo\\SvgCharts\\": "/src/"
+    }
+  }
+}
