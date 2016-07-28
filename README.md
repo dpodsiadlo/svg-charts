@@ -26,11 +26,17 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 ### Basic Usage
 
 #### Line chart
+
+![Line chart example](https://github.com/dpodsiadlo/svg-charts/blob/master/examples/images/ps1.png)
+
+
+Blade template implementation:
+
 ```blade
 @inject('svgCharts', '\DPodsiadlo\SvgCharts\SvgCharts')
-
-    <img style="width: 174mm; height: 80mm"
-         src="{{$svgCharts->lineChart([
+    
+<img style="width: 174mm; height: 80mm"
+     src="{{$svgCharts->lineChart([
             'labels' => [
                 'Monday',
                 'Tuesday',
@@ -41,8 +47,9 @@ Once installed, register Laravel service provider, in your `config/app.php`:
                 'Sunday'
             ],
             'data' => [
-                [1,2,3,4,1,2,6], // First dataset
-                [4,1,22,3,4,55,1] //Second dataset
+                [4,1,22,3,4,55,1], // First dataset
+                [1,3,2,4,1,2,6] // Second dataset
+
             ]
          ],[
         'colors' => ['#32638e','#f00000'], //Colors for datasets
