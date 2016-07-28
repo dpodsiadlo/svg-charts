@@ -27,7 +27,7 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 
 #### Line chart
 
-![Line chart example](https://github.com/dpodsiadlo/svg-charts/blob/master/examples/images/ps1.png)
+![Line chart example](examples/images/ps1.png)
 
 
 Blade template implementation:
@@ -68,4 +68,4 @@ Blade template implementation:
 
 ### License
 
-The MIT License (MIT). Please see [License File](https://github.com/dpodsiadlo/svg-charts/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
