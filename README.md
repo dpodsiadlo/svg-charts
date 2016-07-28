@@ -1,6 +1,6 @@
 # SVG Charts 
 
-A package for Laraver to generate SVG charts compatible with DOMPDF. 
+A package for Laraver to generate SVG charts compatible with [DOMPDF](https://github.com/dompdf/dompdf). 
 
 ### Installation
 
