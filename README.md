@@ -33,7 +33,7 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 Blade template implementation:
 
 ```blade
-@inject('svgCharts', '\DPodsiadlo\SvgCharts\SvgCharts')     // Injecting the service
+@inject('svgCharts', '\DPodsiadlo\SvgCharts\SvgCharts')     {{-- Injecting the service --}}
     
 <img style="width: 174mm; height: 80mm"
      src="{{$svgCharts->lineChart([
