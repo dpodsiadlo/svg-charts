@@ -33,7 +33,7 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 Blade template implementation:
 
 ```blade
-@inject('svgCharts', '\DPodsiadlo\SvgCharts\SvgCharts')
+@inject('svgCharts', '\DPodsiadlo\SvgCharts\SvgCharts')     // Injecting the service
     
 <img style="width: 174mm; height: 80mm"
      src="{{$svgCharts->lineChart([
@@ -47,12 +47,12 @@ Blade template implementation:
                 'Sunday'
             ],
             'data' => [
-                [4,1,22,3,4,55,1], // First dataset
-                [1,3,2,4,1,2,6] // Second dataset
+                [4,1,22,3,4,55,1],                          // First dataset
+                [1,3,2,4,1,2,6]                             // Second dataset
 
             ]
          ],[
-        'colors' => ['#32638e','#f00000'], //Colors for datasets
+        'colors' => ['#32638e','#f00000'],                  // Colors for datasets
         'axisColor' => '#4a4a4c',
         'axisWidth' => 2,
         'gridColor' => '#9c9c9b',
@@ -60,8 +60,8 @@ Blade template implementation:
         'valueGroups' => 5,
         'width' => 1600,
         'height' => 900,
-        'valueFormatter' => function($value){ // Closure for formatting values
-            return money_lc($value);
+        'valueFormatter' => function($value){               // Closure for formatting values
+            return money_format("%.2n", $value);            // Used setlocale(LC_MONETARY, 'en_US.UTF-8') for this example
         }
      ])->toImgSrc()}}"/>
 ```

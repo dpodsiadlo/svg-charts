@@ -32,7 +32,7 @@ class LineChart extends Chart
 
 
         $this->min = PHP_INT_MAX;
-        $this->max = PHP_INT_MIN;
+        $this->max = -PHP_INT_MAX;
 
         for ($i = 0; $i < count($this->data['data']); $i++) {
             foreach ($this->data['data'][$i] as $val) {
