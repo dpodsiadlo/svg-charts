@@ -17,7 +17,7 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 ```php
 'providers' => [
 	...
-    DPodsiadlo\SvgCharts\Providers\SvgChartsServiceProvider::class,
+    DPodsiadlo\SvgCharts\Providers\SvgChartsProvider::class,
 ]
 ```
 
