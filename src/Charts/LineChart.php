@@ -11,6 +11,8 @@ class LineChart extends Chart
 
     protected $options = [
         'colors' => ['#32638e'],
+        'fillColor' => ['#32638e'],
+        'stroke' => 1,
         'axisColor' => '#4a4a4c',
         'axisWidth' => 2,
         'gridColor' => '#9c9c9b',
@@ -159,7 +161,7 @@ class LineChart extends Chart
             $path = "M" . $this->axisX0 . " " . $this->axisY0;
 
             foreach ($data as $value) {
-                $y = $this->axisY0 - ($value - $this->min) / ($this->max - $this->min) * $hth;
+                $y = $this->axisY0 - ($value - $this->min) / max($this->max - $this->min, 1) * $hth;
 
                 $x += $stepX;
                 $path .= " L" . $x . " " . $y;
