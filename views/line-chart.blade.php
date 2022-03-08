@@ -36,7 +36,7 @@
         </g>
 
         @foreach($paths as $i => $path)
-            <path d="{{$path}}" stroke="{{$colors[$i]}}" stroke-width="1" fill="{{$colors[$i]}}"/>
+            <path d="{{$path}}" stroke="{{$colors[$i]}}" stroke-width="{{$stroke}}" fill="{{$fillColor[$i]}}"/>
         @endforeach
     @else
         <text style="font-family: sans-serif; font-size: 25pt;" x="{{$width*.5}}" y="{{$height*.5}}" fill="{{$gridColor}}"

@@ -10,7 +10,7 @@ Via Composer
 $ composer require dpodsiadlo/svg-charts
 ```
 
-### Configuration
+### Configuration (only if you have auto discovery disabled)
 
 Once installed, register Laravel service provider, in your `config/app.php`:
 
@@ -21,6 +21,14 @@ Once installed, register Laravel service provider, in your `config/app.php`:
 ]
 ```
 
+
+### Customize
+
+To customize the chart you can publish the view to `/resources/views/vendor/svg-charts`:
+
+```bash
+ php artisan vendor:publish --provider="DPodsiadlo\SvgCharts\Providers\SvgChartsProvider" 
+```
 
 
 ### Basic Usage
@@ -53,6 +61,8 @@ Blade template implementation:
             ]
          ],[
         'colors' => ['#32638e','#f00000'],                  // Colors for datasets
+        'fillColor' => ['#32638e','#f00000'],                  
+        'stroke' => 1,                  
         'axisColor' => '#4a4a4c',
         'axisWidth' => 2,
         'gridColor' => '#9c9c9b',
