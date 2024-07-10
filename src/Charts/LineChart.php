@@ -127,7 +127,7 @@ class LineChart extends Chart
 
 
         for ($i = 1; $i < $this->valueGroups; $i++) {
-            $y = $this->height * .9 - $this->margin - ($i / $this->valueGroups) * ($this->height * .9 - 2 * $this->margin);
+            $y = strval($this->height * .9 - $this->margin - ($i / $this->valueGroups) * ($this->height * .9 - 2 * $this->margin));
             $res['values'][$y] = $this->min + $i * ($this->max - $this->min) / $this->valueGroups;
 
             if (isset($this->options['valueFormatter'])) {
